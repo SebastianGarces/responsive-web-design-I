@@ -480,7 +480,7 @@ br {
   margin-top: 2em;
   border-top: 2px solid rgba(0, 0, 0, 0.25);
   display: flex;
-  height: calc(945px + 10em);
+  min-height: calc(945px + 10em);
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
@@ -489,9 +489,15 @@ br {
 .flex-card {
   border: black solid 1px;
   width: calc(50% - 1.25em);
-  height: 315px;
+  min-height: 315px;
   padding: 2em;
   background-color: rgb(236, 236, 236);
+  margin-bottom: 2em;
+}
+
+.flex-card:nth-child(6),
+.flex-card:nth-child(5) {
+  margin-bottom: 0;
 }
 
 .flex-card p {
@@ -712,6 +718,10 @@ ul li {
   }
 
   .cards-container {
-    height: calc(1890px + 15em);
+    min-height: calc(1890px + 15em);
+  }
+
+  .flex-card:nth-child(5) {
+    margin-bottom: 2em;
   }
 }
